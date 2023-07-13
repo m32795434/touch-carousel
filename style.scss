@@ -49,6 +49,30 @@
     transform: translateX(100%);
   }
 
+  & img {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  &::after {
+    pointer-events: none;
+    content: attr(data-text);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+  }
+
+  &::selection {
+    background-color: transparent;
+  }
 }
 
 .controls {
