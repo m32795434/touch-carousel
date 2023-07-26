@@ -73,6 +73,10 @@
   &::selection {
     background-color: transparent;
   }
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .controls {
